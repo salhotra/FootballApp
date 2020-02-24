@@ -25,11 +25,21 @@
     "babel-jest": "^25.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "eslint": "^6.8.0",
+    "husky": ">=4",
     "jest": "^25.1.0",
+    "lint-staged": ">=10",
     "metro-react-native-babel-preset": "^0.58.0",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|ts|tsx)": "eslint --cache --fix"
   }
 }
